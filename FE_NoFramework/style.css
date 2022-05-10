@@ -138,7 +138,78 @@ header a
     transition: all 0.125s ease-in 0s;
 }
 
-.b-profile svg:hover
+.b-profile:hover svg
 {
     color: #ececec;
+}
+
+.dropdown-menu
+{
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+    right: 0px;
+    z-index: 5;
+    background: #1e1e1e;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    width: 12rem;
+}
+
+.dropdown-menu a
+{
+    display: block;
+    color: #ececec;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    cursor: pointer;
+}
+.dropdown-menu a:hover
+{
+    color: #96F2D7;
+}
+
+.show
+{
+    display: block;
+}
+
+.searchbar
+{
+    margin-top: 3.5rem;
+    width: 768px;
+    margin-left: auto;
+    margin-right:  auto;
+    margin-bottom: 1.5rem;
+    display: flex;
+    border: 1px solid #a0a0a0;
+    padding: 0px 1.5rem;
+    height: 4rem;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: all 0.125s ease-in 0s;
+    cursor: text;
+}
+
+.searchbar svg
+{
+    color: #ececec;
+    width: 1.5rem;
+    height:  1.5rem;
+    margin-right: 1.25rem;
+}
+
+.searchbar input
+{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    height: 2rem;
+    border: none;
+    background: #00000000;
+    color: #d9d9d9;
+    min-width: 0px;
+    outline: 0px;
 }
