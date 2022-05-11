@@ -2,11 +2,17 @@ body
 {
     background-color : #121212;
     margin: 0;
+    color: #ececec;
+}
+
+a
+{
+    color: inherit;
 }
 
 header
 {
-    
+    color: inherit;
     display:  flex;
     align-items: center;
     justify-content: space-between;
@@ -24,11 +30,6 @@ header nav
     -webkit-box-align: center;
     width: auto;
     height: 40px;
-}
-
-header a
-{
-    color: #ececec;
 }
 
 
@@ -68,7 +69,6 @@ header a
     border-radius:  50%;
     background: transparent;
     cursor: pointer;
-    color: #ececec;
     width: 2.5rem;
     height: 2.5rem;
     outline: none;
@@ -140,7 +140,7 @@ header a
 
 .b-profile:hover svg
 {
-    color: #ececec;
+    color: inherit;
 }
 
 .dropdown-menu
@@ -159,7 +159,6 @@ header a
 .dropdown-menu a
 {
     display: block;
-    color: #ececec;
     text-decoration: none;
     padding: 0.75rem 1rem;
     line-height: 1.5;
@@ -195,7 +194,6 @@ header a
 
 .searchbar svg
 {
-    color: #ececec;
     width: 1.5rem;
     height:  1.5rem;
     margin-right: 1.25rem;
