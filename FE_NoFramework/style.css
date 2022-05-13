@@ -1,28 +1,34 @@
 :root
 {
-    --text-color: #212529;
+    --primary1: #96f2d7;
+    --text1: #212529;
     --bg-color: #F8F9FA;
-    --bg-color-dropdown: #FFFFFF;
+    --bg-element1: #FFFFFF;
     --text-color-write: #212529;
-    --b-hover-color: #F2F2F2;
+    --border3: #dee2e6;
+    --border4: #F2F2F2;
+    --text3: #acacac;
+    --border1: #343a40;
 }
 
-
+.darkMode
+{
+    --text1: #ececec;
+    --bg-color: #121212;
+    --bg-element1: #1e1e1e;
+    --text-color-write: #f1f3f5;
+    --border3: #4d4d4d;
+    --border4: #2A2A2A;
+    --text2: #d0d0d0;
+    --text3: #868e96;
+    --border1: #e0e0e0;
+}
 
 body
 {
     background-color : var(--bg-color);
     margin: 0;
-    color: var(--text-color);
-}
-
-.darkMode
-{
-    --text-color: #ececec;
-    --bg-color: #121212;
-    --bg-color-dropdown: #1e1e1e;
-    --text-color-write: #f1f3f5;
-    --b-hover-color: #2A2A2A;
+    color: var(--text1);
 }
 
 a
@@ -52,6 +58,16 @@ header nav
     height: 40px;
 }
 
+main
+{
+    width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 헤더 */
+
+
 
 .b-darkMode
 {
@@ -62,13 +78,13 @@ header nav
     cursor: pointer;
     width: 2.5rem;
     height: 2.5rem;
-    color: var(--text-color);
+    color: var(--text1);
     position: relative;
 }
 
 .b-darkMode:hover
 {
-    background-color: var(--b-hover-color);
+    background-color: var(--border4);
 }
 
 .b-darkMode i
@@ -97,7 +113,7 @@ header nav
 
 .b-search:hover
 {
-    background-color: var(--b-hover-color);
+    background-color: var(--border4);
 }
 
 /* .b-search i
@@ -115,7 +131,7 @@ header nav
     border: 1px solid var(--text-color-write);
     /* border-color: var(--text-color); */
     border-radius: 1rem;
-    background-color: var(--bg-color-dropdown);
+    background-color: var(--bg-element1);
     outline: none;
     font-weight: bold;
     word-break: keep-all;
@@ -128,7 +144,7 @@ header nav
 .b-write:hover
 {
     color: var(--bg-color);
-    background-color: var(--text-color);
+    background-color: var(--text1);
 }
 
 .b-profile
@@ -171,7 +187,7 @@ header nav
     margin-top: 1rem;
     right: 0px;
     z-index: 5;
-    background: var(--bg-color-dropdown);
+    background: var(--bg-element1);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
     width: 12rem;
 }
@@ -190,10 +206,7 @@ header nav
     color: #96F2D7;
 }
 
-.show
-{
-    display: block;
-}
+
 
 .searchbar
 {
@@ -230,4 +243,230 @@ header nav
     color: #d9d9d9;
     min-width: 0px;
     outline: 0px;
+}
+
+/* 글목록 영역 */
+
+/* 글 목록 헤더 */
+
+.list-header
+{
+    display: flex;
+    margin-top: 1.5rem;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.tab-bar
+{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.tabs
+{
+    display: flex;
+    position: relative;
+    width: 14rem;
+}
+
+
+.tabs a
+{
+    width: 7rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    text-decoration: none;
+    height: 3rem;
+    color: var(--text3);
+}
+
+.tabs a.active
+{
+    color: var(--text1);
+    font-weight: bold;
+}
+
+.tabs svg
+{
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.tab-line
+{
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    background: var(--border1)
+}
+
+.period
+{
+    background: var(--bg-element1);
+    height: 2rem;
+    width: 6rem;
+    border-radius: 4px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-weight: 600;
+    color: var(--text2);
+    font-size: 0.875rem;
+    box-shadow: rgba(0, 0, 0, 5%) 0px 0px 4px;
+    cursor: pointer;
+}
+
+.period-dropdown
+{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: 5;
+    margin-top: 0.5rem;
+    width: 12rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px 0px;
+    background: var(--bg-element1);
+    color: var(--text1);
+    transform-origin: right top;
+}
+
+.period-dropdown ul
+{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.period-dropdown ul li
+{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 00.875rem;
+    padding: 0.75rem 1rem;
+}
+
+.period-dropdown ul li+li
+{
+    border-top: 1px solid var(--border4);
+}
+
+.period-dropdown .active
+{
+    color: var(--primary1);
+}
+
+.list-menu
+{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.list-menu svg
+{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--text3);
+}
+
+.list-menu-dropdown
+{
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: 5;
+    border: 1px solid var(--border3);
+    margin-top: 0.5rem;
+    width: 12rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px 0px;
+    background: var(--bg-element1);
+    color: var(--text1);
+    transform-origin: right top;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.list-menu-dropdown ul
+{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.list-menu-dropdown ul li
+{
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0px;
+}
+
+.list-menu-dropdown li + li
+{
+    border-top: 1px solid var(--border4);
+}
+
+.list-menu-dropdown ul li a
+{
+    display: block;
+    padding: 0.75rem 1rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.list-menu-dropdown .contact
+{
+    border-top: 1px solid var(--border3);
+    padding: 1rem;
+}
+
+.list-menu-dropdown .contact h5
+{
+    margin: 0px;
+    font-size: 0.75rem;
+}
+
+.list-menu-dropdown .contact .email
+{
+    color: var(--text1);
+    font-size: 0.75rem;
+}
+
+.list-menu-dropdown .graph
+{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.list-menu-dropdown .graph a img
+{
+    width: 120px;
+    height: auto;
+}
+
+
+.show
+{
+    display: block;
 }
